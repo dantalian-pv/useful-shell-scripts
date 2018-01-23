@@ -13,7 +13,7 @@ scrot -s $SCR_IMG.png -q 100
 mogrify -modulate 100,0 -resize 400% $SCR_IMG.png 
 #should increase detection rate
 
-tesseract $SCR_IMG.png $SCR_IMG -l deu+eng -psm 1
-xclip $SCR_IMG.txt
+tesseract $SCR_IMG.png $SCR_IMG -l deu+eng -psm 3
+xclip -selection clipboard $SCR_IMG.txt
  
 rm $SCR_IMG $SCR_IMG.png $SCR_IMG.txt
