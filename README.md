@@ -6,7 +6,7 @@ There is a list of bash scripts which you can use for different purposes.
 ### zram.sh
 
 Creates 4 swap partitions by 1Gb each in RAM with some compression ratio.
-Useful when you don't have enough RAM and don't want to deal swap on hard rive.
+Useful when you don't have enough RAM and don't want to deal with swap on hard rive.
 Minimum 8Gb RAM is required, otherwise it is quite pointless.
 
 ### screen-ocr.sh
