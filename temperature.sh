@@ -7,9 +7,9 @@
 # You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
 # Synopsis:
-# The script check Raspbery PI CPU temperature
+# The script checks Raspberry PI CPU temperature
 # and sends GUI notification to an administrator workstation
-# if temperature is higher than defined $THRESHOLD
+# if the temperature is higher than defined $THRESHOLD
 # The temperature is present as NN.NNN °C integer without dot
 
 # Requirements:
