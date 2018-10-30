@@ -7,20 +7,18 @@
 # You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 
 BLOCKSIZE=1073741824
+DEVICES=4
 
-modprobe zram num_devices=4
+modprobe zram num_devices=$DEVICES
 
-echo $BLOCKSIZE > /sys/block/zram0/disksize
-echo $BLOCKSIZE > /sys/block/zram1/disksize
-echo $BLOCKSIZE > /sys/block/zram2/disksize
-echo $BLOCKSIZE > /sys/block/zram3/disksize
+for (( I=0; I<$DEVICES; I++ )); do
+    echo $BLOCKSIZE > /sys/block/zram${I}/disksize
+done
 
-mkswap -p 4096 /dev/zram0
-mkswap -p 4096 /dev/zram1
-mkswap -p 4096 /dev/zram2
-mkswap -p 4096 /dev/zram3
+for (( I=0; I<$DEVICES; I++ )); do
+    mkswap -p 4096 /dev/zram${I}
+done
 
-swapon -p 100 /dev/zram0
-swapon -p 100 /dev/zram1
-swapon -p 100 /dev/zram2
-swapon -p 100 /dev/zram3
+for (( I=0; I<$DEVICES; I++ )); do
+    swapon -p 100 /dev/zram${I}
+done
