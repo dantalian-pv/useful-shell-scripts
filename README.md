@@ -24,12 +24,12 @@ The script checks Raspberry PI CPU temperature and sends GUI notification to an 
 
 Convert jeprof.heap files, made by jemalloc library into svg graph.
 For further details about jemalloc visit http://jemalloc.net/
-Jemalloc generates multiple files during application run, and this scripts converts every heap file into single svg file.
+Jemalloc generates multiple files during application run, and this script converts every heap file into single svg file.
 
 Before run:
 
 1. Install all debug information for all libraries used by application
-2. Compile on istall jemalloc with enabled profiling
+2. Compile or install jemalloc with enabled profiling
 
 Run:
 
